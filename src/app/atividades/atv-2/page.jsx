@@ -2,14 +2,21 @@
 
 import { useState } from "react";
 
+import Link from "next/link";
+
 import styles from './page.module.css';
 
-export default function Exemplo03() {  
+export default function atividade2() {  
 
     const [num, setNum] = useState(100);
 
     function handleIncrementa () {
-        setNum(num + 1);
+         setNum(num + 1);
+      
+    }
+
+    function handleIncrementa2 () {
+         setNum(num - 1);
     }
 
     return (
@@ -19,6 +26,10 @@ export default function Exemplo03() {
                 onClick={() => handleIncrementa()}
                 className={styles.botao}
             >+1</label>
+             <label 
+                onClick={() => handleIncrementa2()}
+                className={styles.botao}
+            >-1</label>
         </div>
     );
 }
