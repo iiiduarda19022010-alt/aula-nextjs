@@ -48,17 +48,17 @@ export default function Atividade05() {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Atividade 5 - Lista de tarefas</h1>
+      <h1 className={styles.titulo}>Atividade 5 - Lista de tarefas</h1>
 
-      <form className={styles.form} onSubmit={handleSubmit}>
+      <form className={styles.formulario} onSubmit={handleSubmit}>
         <input
-          className={styles.input}
+          className={styles.forinput}
           type="text"
           value={taskText}
           onChange={(event) => setTaskText(event.target.value)}
           placeholder="Nova tarefa..."
         />
-        <button className={styles.addBtn} type="submit">
+        <button className={styles.Btn} type="submit">
           {editId ? 'Atualizar tarefa' : 'Adicionar tarefa'}
         </button>
       </form>
@@ -73,14 +73,14 @@ export default function Atividade05() {
               <div className={styles.actions}>
                 <button
                   type="button"
-                  className={styles.editBtn}
+                  className={styles.botoesbtn}
                   onClick={() => handleEdit(task)}
                 >
                   Editar
                 </button>
                 <button
                   type="button"
-                  className={styles.deleteBtn}
+                  className={styles.botoesbtn}
                   onClick={() => handleDelete(task.id)}
                 >
                   Excluir
